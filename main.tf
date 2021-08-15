@@ -2,9 +2,10 @@ module "terraform_state_backend" {
   source  = "cloudposse/tfstate-backend/aws"
   version = "0.33.0"
 
-  namespace  = module.this.namespace
-  stage      = module.this.stage
-  name       = module.this.name
+  namespace = module.this.namespace
+  stage     = module.this.stage
+  name      = module.this.name
+
   profile    = var.profile
   attributes = []
 
