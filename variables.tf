@@ -17,7 +17,7 @@ variable "terraform_backend_config_file_path" {
 variable "terraform_backend_config_file_name" {
   type        = string
   description = "Name of terraform backend config file"
-  default     = "."
+  default     = "backend.tf"
 }
 
 variable "terraform_state_file" {
