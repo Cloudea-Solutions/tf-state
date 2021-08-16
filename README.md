@@ -4,6 +4,8 @@ Terraform module for backend state management using AWS S3 bucket and DynamoDB l
 
 This module makes use of [Cloud Posse Terraform modules](https://github.com/orgs/cloudposse/repositories?q=terraform).
 
+This module also creates a policy that can be attached to a role to give access to the S3 bucket and DynamoDB table. This could be used, for example, to create a CodeBuild script that assumes a role with this policy attached and then deploys infrastructure into another account via Terraform CLI.
+
 ## Usage
 
 Make sure you include `context.tf` from [Cloud Posse Null Label](https://github.com/cloudposse/terraform-null-label) in your own project.
