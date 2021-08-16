@@ -5,6 +5,9 @@
 *.tfstate
 *.tfstate.*
 
+# Ignore the lock file because this repo is a module
+.terraform.lock.hcl
+
 # Crash log files
 crash.log
 
