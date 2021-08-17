@@ -30,7 +30,7 @@ resource "aws_iam_policy" "terraform_access_policy" {
           "dynamodb:PutItem",
           "dynamodb:DeleteItem"
         ]
-        "Resource" : "${module.terraform_state_backend.dynamodb_table_name}"
+        "Resource" : "${module.terraform_state_backend.dynamodb_table_arn}"
       },
       {
         "Effect" : "Allow",
