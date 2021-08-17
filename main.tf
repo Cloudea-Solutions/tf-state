@@ -49,7 +49,7 @@ resource "aws_iam_policy" "terraform_access_policy" {
 }
 
 resource "aws_ssm_parameter" "terraform_policy_name" {
-  name        = "/${module.this.namespace}/${module.this.name}/state/terraform-policy-name"
+  name        = "/${module.this.namespace}/${module.this.name}/terraform-policy-name"
   type        = "String"
   value       = aws_iam_policy.terraform_access_policy.id
   description = "The name of the Terraform access policy"
