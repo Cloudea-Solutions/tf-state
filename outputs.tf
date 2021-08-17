@@ -33,7 +33,7 @@ output "terraform_backend_config" {
   description = "Rendered Terraform backend config file"
 }
 
-output "terraform_policy_id" {
-  value       = aws_iam_policy.terraform_access_policy.id
-  description = "The ID of the policy that gives Terraform access to the backend S3 bucket and DynamoDB"
+output "terraform_policy_name" {
+  value       = aws_iam_policy.terraform_access_policy.name
+  description = "The name of the policy that gives Terraform access to the backend S3 bucket and DynamoDB"
 }
