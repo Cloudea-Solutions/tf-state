@@ -54,3 +54,17 @@ resource "aws_ssm_parameter" "terraform_policy_name" {
   value       = aws_iam_policy.terraform_access_policy.id
   description = "The name of the Terraform access policy"
 }
+
+resource "aws_ssm_parameter" "backend_state_bucket" {
+  name        = "/${module.this.namespace}/${module.this.name}/bucket"
+  type        = "String"
+  value       = module.terraform_state_backend.s3_bucket_id
+  description = "The name of the backend state S3 bucket"
+}
+
+resource "aws_ssm_parameter" "backend_state_dynamodb_table" {
+  name        = "/${module.this.namespace}/${module.this.name}/dynamodb-table"
+  type        = "String"
+  value       = module.terraform_state_backend.dynamodb_table_name
+  description = "The name of the backend state DynamoDB locking table"
+}
