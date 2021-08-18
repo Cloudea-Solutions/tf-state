@@ -40,7 +40,7 @@ resource "aws_iam_policy" "terraform_access_policy" {
       {
         "Effect" : "Allow",
         "Action" : ["s3:GetObject", "s3:PutObject"],
-        "Resource" : "${module.terraform_state_backend.s3_bucket_arn}/var.terraform_state_file"
+        "Resource" : "${module.terraform_state_backend.s3_bucket_arn}/${var.terraform_state_file}"
       }
     ]
   })
