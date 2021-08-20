@@ -1,13 +1,3 @@
-variable "region" {
-  type        = string
-  description = "AWS region"
-}
-
-variable "profile" {
-  type        = string
-  description = "Credentials profile"
-}
-
 variable "terraform_backend_config_file_path" {
   type        = string
   description = "Directory for the terraform backend config file, usually `.`. The default is to create no file."

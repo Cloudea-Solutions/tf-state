@@ -15,20 +15,14 @@ main.tf
 module "terraform_state_backend" {
   source = "github.com/Rail-Cloud-Formation/tf-state"
 
-  profile    = var.profile
-  region     = var.region
-
   context = module.this.context
 }
 ```
 
-Define some variables for your own use case. The following specifies the Sydney AWS region and a credentials profile called `developer`. With the below parameters the resulting bucket name will be `rcf-dev-state` and DynamoDB table will be `rcf-dev-state-lock`.
+Define some variables for your own use case. With the below parameters the resulting bucket name will be `rcf-dev-state` and DynamoDB table will be `rcf-dev-state-lock`.
 
 dev.ap-southeast-2.tfvars
 ```hcl
-region = "ap-southeast-2"
-profile = "developer"
-
 namespace = "rcf"
 name = "state"
 environment = "apse2"

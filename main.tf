@@ -2,8 +2,6 @@ module "terraform_state_backend" {
   source  = "cloudposse/tfstate-backend/aws"
   version = "0.33.0"
 
-  profile = var.profile
-
   billing_mode = "PAY_PER_REQUEST"
 
   terraform_backend_config_file_path = var.terraform_backend_config_file_path
