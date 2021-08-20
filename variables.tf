@@ -15,3 +15,8 @@ variable "terraform_state_file" {
   description = "The path to the state file inside the bucket"
   default     = "terraform.tfstate"
 }
+
+variable "role_arn" {
+  type        = string
+  description = "The role to assume for backend"
+}

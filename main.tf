@@ -4,6 +4,8 @@ module "terraform_state_backend" {
 
   billing_mode = "PAY_PER_REQUEST"
 
+  role_arn = var.role_arn
+
   terraform_backend_config_file_path = var.terraform_backend_config_file_path
   terraform_backend_config_file_name = var.terraform_backend_config_file_name
   terraform_state_file               = var.terraform_state_file
