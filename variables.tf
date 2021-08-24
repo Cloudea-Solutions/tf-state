@@ -19,4 +19,5 @@ variable "terraform_state_file" {
 variable "role_arn" {
   type        = string
   description = "The role to assume for backend"
+  default     = null
 }
